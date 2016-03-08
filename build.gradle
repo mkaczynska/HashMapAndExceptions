@@ -1,0 +1,20 @@
+group 'com.blstream.strategy'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+jar{
+    manifest {
+
+        attributes 'Main-Class': 'Main'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

@@ -201,8 +201,11 @@ public class SortedMapTest {
     public void testGetShouldThrowNullKeyException() throws NullKeyException {
         //given
         SortedMap<Integer,Integer> map = new SortedMap<>();
-            map.put(1, 1);
-            map.get(null);
+        map.put(1, 1);
+        //when
+        map.get(null);
+        //then
+        fail("Exception should be thrown");
     }
 
     @Test(expected=NullKeyException.class)
@@ -210,7 +213,10 @@ public class SortedMapTest {
         //given
         SortedMap<Integer,Integer> map = new SortedMap<>();
         map.put(1, 1);
+        //when
         map.findValueOfKeyInChilds(null, 1);
+        //then
+        fail("Exception should be thrown");
     }
 
 

@@ -43,8 +43,10 @@ public class HashMapTest {
         HashMap<Integer,Integer> map = new MyHashMap();
         map.put(1,1);
 
-        //then
+        //when
         map.put(null, 2);
+        //then
+        fail("Exception should be thrown");
     }
 
     @Test(expected=NullKeyException.class)
@@ -53,8 +55,10 @@ public class HashMapTest {
         HashMap<Integer,Integer> map = new MyHashMap();
         map.put(1,1);
 
-        //then
+        //when
         map.remove(null);
+        //then
+        fail("Exception should be thrown");
     }
 
     @Test(expected=NullKeyException.class)
@@ -64,8 +68,10 @@ public class HashMapTest {
         map.put(1,1);
         map.put(2,2);
 
-        //then
+        //when
         map.findElement(null);
+        //then
+        fail("Exception should be thrown");
     }
 
     @Test(expected=NullKeyException.class)
@@ -75,8 +81,10 @@ public class HashMapTest {
         map.put(1,1);
         map.put(2,2);
 
-        //then
+        //when
         map.hash(null);
+        //then
+        fail("Exception should be thrown");
     }
 
 
